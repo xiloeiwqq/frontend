@@ -22,7 +22,6 @@ button {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
   z-index: 20;
 }
 
@@ -68,8 +67,7 @@ button {
 
     &__content {
         padding-top: 196px;
-        padding-right: 450px;
-        width: 100%;
+        width: 1200px;
         
         &__title {
             font-size: 64px;
@@ -182,7 +180,8 @@ button {
         &-row {
             display: flex;
             flex-direction: row;
-            gap: 32px;
+            gap: 20px;
+            justify-content: center;
 
             &--top {
                 margin-top: 72px;
