@@ -8,6 +8,10 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   background: rgb(32, 32, 39);
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 input,
@@ -16,7 +20,7 @@ button {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   z-index: 20;
@@ -24,7 +28,7 @@ button {
 
 .header {
   box-sizing: border-box;
-  height: 798px;
+  height: 787px;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
@@ -58,7 +62,8 @@ button {
 }
 .header__content {
   padding-top: 196px;
-  width: 1200px;
+  padding-right: 450px;
+  width: 100%;
 }
 .header__content__title {
   font-size: 64px;
@@ -127,7 +132,7 @@ button {
 }
 .about__content {
   padding-top: 196px;
-  width: 1200px;
+  width: 100%;
 }
 .about__content__title {
   font-size: 64px;
@@ -138,6 +143,9 @@ button {
   margin-bottom: 48px;
   color: rgb(255, 255, 255);
 }
+.about__content__title-mob {
+  display: none;
+}
 .about__content__subtitle {
   margin-bottom: 48px;
   font-size: 24px;
@@ -147,7 +155,8 @@ button {
   color: rgb(255, 255, 255);
 }
 .about__games-preview {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
 }
 .about__games-preview-row {
   display: flex;
@@ -199,12 +208,151 @@ button {
   letter-spacing: 0px;
   text-align: left;
 }
+.about__games-preview-row-card__content-button {
+  display: none;
+}
 
 .footer {
   background: rgb(189, 237, 53);
   padding: 30px 0;
+  width: 100%;
 }
 .footer__copyright {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    height: 667px;
+    padding-top: 40px;
+  }
+  .header__star--1 {
+    width: 35px;
+    top: 97px;
+    left: 37px;
+  }
+  .header__star--2 {
+    width: 21px;
+    left: 92px;
+    top: 64px;
+  }
+  .header__star--3 {
+    width: 21px;
+    bottom: 24px;
+    right: 86px;
+  }
+  .header__star--4 {
+    width: 35px;
+    bottom: 28px;
+    right: 32px;
+  }
+  .header__star--5 {
+    display: none;
+  }
+  .header__star--mob {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: auto;
+  }
+  .header__content {
+    padding: 75px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .header__content__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .header__content__subtitle {
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .header__content__button {
+    width: 285px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+    padding: 16px 28px 16px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+  }
+  .about__star {
+    display: none;
+  }
+  .about__content__title {
+    display: none;
+  }
+  .about__content__title-mob {
+    display: block;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .about__content__subtitle {
+    display: none;
+  }
+  .about__games-preview-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .about__games-preview-row--bottom {
+    align-content: flex-start;
+    margin-top: 32px;
+  }
+  .about__games-preview-row-card__content-button {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    width: 285px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+    padding: 16px 28px 16px 28px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
