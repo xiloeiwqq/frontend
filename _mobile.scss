@@ -1,0 +1,172 @@
+@media (max-width: 768px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        height: 667px;
+        padding-top: 40px;
+
+
+        &__star {
+            &--1 {
+                width: 35px;
+                top: 97px;
+                left: 37px;
+            }
+            
+            &--2 {
+                width: 21px;
+                left: 92px;
+                top: 64px;
+            }
+            
+            &--3 {
+                width: 21px;
+                bottom: 24px;
+                right: 86px;
+            }
+            
+            &--4 {
+                width: 35px;
+                bottom: 28px;
+                right: 32px;
+            }
+            
+            &--5 {
+                display: none;
+            }
+            
+            &--mob {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 180px;
+                height: auto;
+ 
+            }
+    
+        }
+        
+        &__content {
+            padding: 75px 0;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 49px;
+                letter-spacing: 0px;
+                text-align: center;
+            }
+
+            &__subtitle {
+                align-items: center;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0px;
+                text-align: center;
+            }
+
+            &__button {
+                width: 285px;
+                height: 55px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10;
+                padding: 16px 28px 16px 28px;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0px;
+                text-align: center;
+                box-sizing: border-box;
+                border: 1px solid rgba(32, 32, 39, 1);
+                border-radius: 60px;        
+            }
+        }
+    }
+
+    .about {
+
+        &__star {
+            display: none;
+        }
+
+        &__content {
+
+            &__title{
+                display: none;
+                
+                &-mob{
+                    display: block;
+                    color: #ffffff;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 49px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                }
+            }
+
+            &__subtitle {
+                display: none;
+            }
+
+        }
+        &__games-preview {
+
+            &-row {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 32px;
+                
+                &--bottom{
+                    align-content: flex-start;
+                    margin-top: 32px;
+                }
+
+                &-card{
+
+                    &__content{
+
+                        &-button{
+                            display: block;
+                            box-sizing: border-box;
+                            border: 1px solid rgba(32, 32, 39, 1);
+                            border-radius: 60px;
+                            background: rgba(32, 32, 39, 1);
+                            width: 285px;
+                            height: 55px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10;
+                            padding: 16px 28px 16px 28px;
+                            color: #ffffff;
+                            text-decoration: none;
+                            margin-top: 16px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 141.69%;
+                            letter-spacing: 0%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
