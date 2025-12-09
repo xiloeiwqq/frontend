@@ -1,64 +1,73 @@
 //task1
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
+let password = 'пароль';
+let userInput = prompt('Введите пароль');
+
+if (userInput === password) {
+    console.log('Пароль введен верно');
+} else {
+    console.log('Пароль введен неправильно');
+}
 
 //task2
+let c = 0;
 
-let iPhoneRelease = 2007;
-alert(iPhoneRelease);
+if (c > 0 && c < 10) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+
+c = 0;
+if (c > 0 && c < 10) console.log('Верно'); else console.log('Неверно');
+
+c = 10;
+if (c > 0 && c < 10) console.log('Верно'); else console.log('Неверно');
+
+c = -3;
+if (c > 0 && c < 10) console.log('Верно'); else console.log('Неверно');
+
+c = 2;
+if (c > 0 && c < 10) console.log('Верно'); else console.log('Неверно');
 
 //task3
+let d = 50;
+let e = 120;
 
-let jsCreator = 'Brendan Eich';
-alert(jsCreator);
+if (d > 100 || e > 100) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
 
 //task4
-
-let num1 = 10;
-let num2 = 2;
-alert(num1 + num2);
-alert(num1 - num2);
-alert(num1 * num2);
-alert(num1 / num2);
+let a = '2';
+let b = '3';
+alert(Number(a) + Number(b));
 
 //task5
+let monthNumber = 12;
 
-let result = num2 ** 5;
-alert(result)
-
-//task6
-
-let n1 = 9;
-let n2 = 2;
-alert(n1 % n2)
-
-//task7
-
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num ++;
-num --;
-alert(num);
-
-//task8
-
-let age = prompt('How old are you?')
-alert(age)
-
-//task9
-
-let user = {
-    name: 'Костик',
-    age: 15,
-    isAdmin: true
-};
-
-//task10
-
-let userName = prompt('Your name: ')
-alert('Hi, ${userName}!')
+switch(monthNumber) {
+    case 1:
+    case 2:
+    case 12:
+        console.log('зима');
+        break;
+    case 3:
+    case 4:
+    case 5:
+        console.log('весна');
+        break;
+    case 6:
+    case 7:
+    case 8:
+        console.log('лето');
+        break;
+    case 9:
+    case 10:
+    case 11:
+        console.log('осень');
+        break;
+    default:
+        console.log('номер месяца должен быть от 1 до 12');
+}
