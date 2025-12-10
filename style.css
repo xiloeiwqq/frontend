@@ -482,7 +482,8 @@ button {
   }
   .game-detail {
     width: 100%;
-    height: 500px;
+    min-height: auto;
+    height: auto;
     border-radius: 30px;
     box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
     background: #FFFFFF;
@@ -490,21 +491,37 @@ button {
     margin-bottom: 32px;
     overflow: hidden;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .game-detail--reversed {
+    flex-direction: column;
+  }
+  .game-detail__image {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    order: 1;
   }
   .game-detail__content {
     max-width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 24px;
+    order: 2;
   }
   .game-detail__title {
     color: rgb(32, 32, 39);
     font-family: Montserrat;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 39px;
+    line-height: 29px;
     letter-spacing: 0px;
     text-align: left;
+    margin: 0;
   }
   .game-detail__description {
     color: rgb(32, 32, 39);
@@ -514,6 +531,7 @@ button {
     line-height: 20px;
     letter-spacing: 0px;
     text-align: left;
+    margin: 0;
   }
   .game-detail__button {
     display: flex;
@@ -521,7 +539,7 @@ button {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 16px 28px 16px 28px;
+    padding: 16px 28px;
     box-sizing: border-box;
     border: 1px solid rgb(32, 32, 39);
     border-radius: 60px;
@@ -532,5 +550,7 @@ button {
     text-align: center;
     color: white;
     width: 100%;
+    margin-top: 8px;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=style.css.map */
