@@ -68,52 +68,50 @@ button {
     &__content {
         padding-top: 196px;
         width: 1200px;
+    }
         
-        &__title {
-            font-size: 64px;
-            font-weight: 700;
-            line-height: 78px;
-            letter-spacing: 0px;
-            text-align: left;
-            margin-bottom: 48px;
-            color: rgba(32, 32, 39, 1);
-        }
-
-        &__subtitle {
-            margin-bottom: 48px;
-            font-size: 24px;
-            line-height: 32px;
-            letter-spacing: 0px;
-            text-align: left;
-            color: rgba(32, 32, 39, 1);
-        }
-
-        &__button {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 16px 28px 16px 28px;
-            width: 247px;
-            box-sizing: border-box;
-            border: 1px solid rgba(32, 32, 39, 1);
-            border-radius: 60px;
-            background: rgba(32, 32, 39, 1);
-            color: rgba(255, 255, 255, 1);
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 141.69%;
-            text-align: center;
-            text-decoration: none;
-            transition: 0.2s;
-
-            &:hover {
-                background: rgba(255, 255, 255, 1);
-                color: rgba(32, 32, 39, 1);
-            }
-        }
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-bottom: 48px;
+        color: rgba(32, 32, 39, 1);
+    }
+    
+    &__subtitle {
+        margin-bottom: 48px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: rgba(32, 32, 39, 1);
     }
 
+    &__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 28px 16px 28px;
+        width: 247px;
+        box-sizing: border-box;
+        border: 1px solid rgba(32, 32, 39, 1);
+        border-radius: 60px;
+        background: rgba(32, 32, 39, 1);
+        color: rgba(255, 255, 255, 1);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+        text-decoration: none;
+        transition: 0.2s;
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+            color: rgba(32, 32, 39, 1);
+        }
+    }
 }
 
 .about {
