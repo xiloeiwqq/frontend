@@ -140,35 +140,32 @@
                     align-content: flex-start;
                     margin-top: 32px;
                 }
+            }
 
-                &-card{
+            &-card{
 
-                    &__content{
-
-                        &-button{
-                            display: block;
-                            box-sizing: border-box;
-                            border: 1px solid rgba(32, 32, 39, 1);
-                            border-radius: 60px;
-                            background: rgba(32, 32, 39, 1);
-                            width: 100%;
-                            height: 55px;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 10;
-                            padding: 16px 28px 16px 28px;
-                            color: #ffffff;
-                            text-decoration: none;
-                            margin-top: 16px;
-                            font-size: 16px;
-                            font-weight: 600;
-                            line-height: 141.69%;
-                            letter-spacing: 0%;
-                            text-align: center;
-                        }
-                    }
+                &-button{
+                    display: block;
+                    box-sizing: border-box;
+                    border: 1px solid rgba(32, 32, 39, 1);
+                    border-radius: 60px;
+                    background: rgba(32, 32, 39, 1);
+                    width: 100%;
+                    height: 55px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10;
+                    padding: 16px 28px 16px 28px;
+                    color: #ffffff;
+                    text-decoration: none;
+                    margin-top: 16px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 141.69%;
+                    letter-spacing: 0%;
+                    text-align: center;
                 }
             }
         }    
@@ -189,32 +186,50 @@
         }
     }
 
-    .game-detail {
+        .game-detail {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+        background: #FFFFFF;
+        padding: 0px;
+        margin-bottom: 32px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        &--reversed {
+            flex-direction: column;
+        }
+
+        &__image {
             width: 100%;
-            height: 500px;
-            border-radius: 30px;
-            box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
-            background: #FFFFFF;
-            padding: 0px;
-            margin-bottom: 32px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
+            height: auto;
+            object-fit: cover;
+            order: 1;
+        }
 
         &__content {
             max-width: 100%;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            margin: 24px;
+            order: 2;
         }
 
         &__title {
             color: rgb(32, 32, 39);
             font-family: Montserrat;
+            font-size: 24px;
             font-weight: 700;
-            line-height: 39px;
+            line-height: 29px;
             letter-spacing: 0px;
-            text-align: left;   
+            text-align: left;
+            margin: 0;
         }
 
         &__description {
@@ -224,7 +239,8 @@
             font-weight: 400;
             line-height: 20px;
             letter-spacing: 0px;
-            text-align: left
+            text-align: left;
+            margin: 0;
         }
 
         &__button {
@@ -233,7 +249,7 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            padding: 16px 28px 16px 28px;
+            padding: 16px 28px;
             box-sizing: border-box;
             border: 1px solid rgba(32, 32, 39, 1);
             border-radius: 60px;
@@ -244,6 +260,8 @@
             text-align: center;
             color: white;
             width: 100%;
+            margin-top: 8px;
+            cursor: pointer;
         }
     }
 }
