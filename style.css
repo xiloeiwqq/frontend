@@ -182,12 +182,6 @@ button {
 .about__games-preview-card:hover {
   transform: scale(1.05);
 }
-.about__games-preview-card--small {
-  /* size styles can be added here if needed */
-}
-.about__games-preview-card--large {
-  /* size styles can be added here if needed */
-}
 .about__games-preview-card-image {
   border-radius: 30px;
 }
