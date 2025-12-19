@@ -169,28 +169,29 @@ button {
 .about__games-preview-row--bottom {
   align-items: flex-end;
 }
-.about__games-preview-row_link {
+.about__games-preview-link {
   text-decoration: none;
+  display: block;
 }
-.about__games-preview-row-card {
+.about__games-preview-card {
   background-color: white;
   border-radius: 30px;
   padding-bottom: 36px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.about__games-preview-row-card:hover {
+.about__games-preview-card:hover {
   transform: scale(1.05);
 }
-.about__games-preview-row-card__image {
+.about__games-preview-card-image {
   border-radius: 30px;
 }
-.about__games-preview-row-card__content {
+.about__games-preview-card-content {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 35px;
 }
-.about__games-preview-row-card__content-num {
+.about__games-preview-card-number {
   color: rgb(32, 32, 39);
   font-size: 16px;
   font-weight: 500;
@@ -198,7 +199,7 @@ button {
   letter-spacing: 0px;
   text-align: left;
 }
-.about__games-preview-row-card__content-name {
+.about__games-preview-card-name {
   color: rgb(32, 32, 39);
   font-size: 32px;
   font-weight: 700;
@@ -206,7 +207,7 @@ button {
   letter-spacing: 0px;
   text-align: left;
 }
-.about__games-preview-row-card__content-button {
+.about__games-preview-card-button {
   display: none;
 }
 
@@ -332,7 +333,7 @@ button {
   justify-content: center;
 }
 
-@media (max-width: 754px) {
+@media (max-width: 768px) {
   .container {
     padding-left: 16px;
     padding-right: 16px;

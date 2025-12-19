@@ -190,53 +190,54 @@ button {
             &--bottom {
                 align-items: flex-end;
             }
+        }
 
-            &_link {
-                text-decoration: none;
+        &-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        &-card {
+            background-color: white;
+            border-radius: 30px;
+            padding-bottom: 36px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.05);
             }
 
-            &-card {
-                background-color: white;
+            &-image {
                 border-radius: 30px;
-                padding-bottom: 36px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                
-                &:hover {
-                    transform: scale(1.05);
-                }
+            }
 
-                &__image {
-                    border-radius: 30px;
-                }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin: 35px;
+            }
 
-                &__content {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 16px;
-                    margin: 35px;
-                    
-                    &-num {
-                        color: rgba(32, 32, 39, 1);
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: 110%;
-                        letter-spacing: 0px;
-                        text-align: left;
-                    }
+            &-number {
+                color: rgba(32, 32, 39, 1);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 110%;
+                letter-spacing: 0px;
+                text-align: left;
+            }
 
-                    &-name {
-                        color: rgba(32, 32, 39, 1);
-                        font-size: 32px;
-                        font-weight: 700;
-                        line-height: 39px;
-                        letter-spacing: 0px;
-                        text-align: left;
-                    }
+            &-name {
+                color: rgba(32, 32, 39, 1);
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                letter-spacing: 0px;
+                text-align: left;
+            }
 
-                    &-button {
-                        display: none;
-                    }
-                }
+            &-button {
+                display: none;
             }
         }
     }
