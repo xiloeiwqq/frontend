@@ -1,104 +1,125 @@
-// task1
-const arr1 = [1, 5, 4, 10, 0, 3];
-for (let i = 0; i < arr1.length; i++) {
-    console.log(arr1[i]);
-    if (arr1[i] === 10) {
-        break;
-    }
-}
+//task1
+const task1 = () => {
+    const str = 'js';
+    const result = str.toUpperCase();
+    console.log('Задание 1:', result);
+    return result;
+};
 
-// task2
-const arr2 = [1, 5, 4, 10, 0, 3];
-console.log(arr2.indexOf(4));
+//task2
+const task2 = () => {
+    const filterStrings = (arr, prefix) => {
+        const lowerPrefix = prefix.toLowerCase();
+        return arr.filter(item => 
+            item.toLowerCase().startsWith(lowerPrefix)
+        );
+    };
+    
+    const array = ['JavaScript', 'jQuery', 'React', 'Java', 'Python', 'jsx'];
+    const result = filterStrings(array, 'ja');
+    console.log('Задание 2:', result);
+    return result;
+};
 
-// task3
-const arr3 = [1, 3, 5, 10, 20];
-console.log(arr3.join(' '));
+//task3
+const task3 = () => {
+    const number = 32.58884;
+    const results = {
+        floor: Math.floor(number),
+        ceil: Math.ceil(number),
+        round: Math.round(number)
+    };
+    console.log('Задание 3:', results);
+    return results;
+};
 
-// task4
-const result4 = [];
-for (let i = 0; i < 3; i++) {
-    const innerArray = [];
-    for (let j = 0; j < 3; j++) {
-        innerArray.push(1);
-    }
-    result4.push(innerArray);
-}
-console.log(result4);
+//task4
+const task4 = () => {
+    const numbers = [52, 53, 49, 77, 21, 32];
+    const min = Math.min(...numbers);
+    const max = Math.max(...numbers);
+    const result = { min, max };
+    console.log('Задание 4:', result);
+    return result;
+};
 
-// task5
-const arr5 = [1, 1, 1];
-arr5.push(2, 2, 2);
-console.log(arr5);
+//task5
+const task5 = () => {
+    const getRandomNumber = () => {
+        const randomNum = Math.floor(Math.random() * 10) + 1;
+        console.log('Задание 5 (случайное число):', randomNum);
+        return randomNum;
+    };
+    return getRandomNumber();
+};
 
-// task6
-const arr6 = [9, 8, 7, 'a', 6, 5];
-arr6.sort();
-const filteredArr6 = arr6.filter(item => typeof item === 'number');
-console.log(filteredArr6);
+//task6
+const task6 = () => {
+    const generateRandomArray = (n) => {
+        const length = Math.floor(n / 2);
+        const result = Array.from({ length }, () => Math.floor(Math.random() * (n + 1)));
+        console.log('Задание 6:', result);
+        return result;
+    };
+    
+    const result = generateRandomArray(10);
+    return result;
+};
 
-// task7
-const arr7 = [9, 8, 7, 6, 5];
-const userGuess = prompt('Угадайте число от 1 до 9');
-if (arr7.includes(Number(userGuess))) {
-    alert('Угадал');
-} else {
-    alert('Не угадал');
-}
+//task7
+const task7 = () => {
+    const getRandomInRange = (min, max) => {
+        const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log('Задание 7:', randomNum);
+        return randomNum;
+    };
+    
+    const result = getRandomInRange(5, 15);
+    return result;
+};
 
-// task8
-const str8 = 'abcdef';
-const reversedStr8 = str8.split('').reverse().join('');
-console.log(reversedStr8);
+//task8
+const task8 = () => {
+    const currentDate = new Date();
+    console.log('Задание 8 (текущая дата):', currentDate);
+    return currentDate;
+};
 
-// task9
-const arr9 = [[1, 2, 3], [4, 5, 6]];
-const flattenedArr9 = [...arr9[0], ...arr9[1]];
-console.log(flattenedArr9);
+//task9
+const task9 = () => {
+    const currentDate = new Date();
+    const futureDate = new Date(currentDate);
+    futureDate.setDate(currentDate.getDate() + 73);
+    console.log('Задание 9:', {
+        currentDate: currentDate.toLocaleDateString(),
+        dateIn73Days: futureDate.toLocaleDateString()
+    });
+    return futureDate;
+};
 
-// task10
-const arr10 = [3, 5, 7, 2, 8];
-for (let i = 0; i < arr10.length; i++) {
-    if (i + 1 < arr10.length) {
-        const sum = arr10[i] + arr10[i + 1];
-        console.log(`Сумма элементов ${arr10[i]} и ${arr10[i + 1]}: ${sum}`);
-    }
-}
-
-// task11
-function squareArray(numbers) {
-    return numbers.map(num => num * num);
-}
-console.log(squareArray([1, 2, 3, 4, 5]));
-
-// task12
-function getWordLengths(words) {
-    return words.map(word => word.length);
-}
-console.log(getWordLengths(['hello', 'world', 'javascript', 'code']));
-
-// task13
-function getNegativeNumbers(numbers) {
-    return numbers.filter(num => num < 0);
-}
-console.log(getNegativeNumbers([1, -2, 3, -4, 5, -6]));
-
-// task14
-const originalArray14 = [];
-for (let i = 0; i < 10; i++) {
-    originalArray14.push(Math.floor(Math.random() * 11));
-}
-const evenNumbers14 = originalArray14.filter(num => num % 2 === 0);
-console.log('Исходный массив:', originalArray14);
-console.log('Четные числа:', evenNumbers14);
-
-// task15
-const numbers15 = [];
-for (let i = 0; i < 6; i++) {
-    numbers15.push(Math.floor(Math.random() * 10) + 1);
-}
-const sum15 = numbers15.reduce((acc, num) => acc + num, 0);
-const average15 = sum15 / numbers15.length;
-console.log('Массив:', numbers15);
-console.log('Сумма:', sum15);
-console.log('Среднее арифметическое:', average15);
+//task10
+const task10 = () => {
+    const formatDate = (date) => {
+        const days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+        const months = [
+            'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+            'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+        ];
+        
+        const dayOfWeek = days[date.getDay()];
+        const day = date.getDate();
+        const month = months[date.getMonth()];
+        const year = date.getFullYear();
+        
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+        
+        const formatted = `Дата: ${day} ${month} ${year} — это ${dayOfWeek}. Время: ${hours}:${minutes}:${seconds}`;
+        console.log('Задание 10:', formatted);
+        return formatted;
+    };
+    
+    const result = formatDate(new Date());
+    return result;
+};
