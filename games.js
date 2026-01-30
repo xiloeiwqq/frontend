@@ -148,3 +148,36 @@ function quizGame() {
 
     alert(`Викторина завершена!\n\nВы правильно ответили на ${correctCount} из ${quiz.length} вопросов.`);
 }
+
+// игра "Камень, ножницы, бумага"
+function playRockPaperScissors() {
+    const choices = ["камень", "ножницы", "бумага"];
+    
+    const userChoice = prompt("Введите ваш выбор (камень, ножницы или бумага):").toLowerCase();
+    
+    if (!choices.includes(userChoice)) {
+        alert("Некорректный выбор. Пожалуйста, введите 'камень', 'ножницы' или 'бумага'");
+        return;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * 3);
+    const computerChoice = choices[randomIndex];
+    
+    let result;
+    
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Компьютер победил!";
+    }
+    
+    const message = `Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\n\n${result}`;
+    
+    alert(message);
+}
