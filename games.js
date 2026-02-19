@@ -184,20 +184,10 @@ function playRockPaperScissors() {
 
 // игра "Генератор случайных цветов"
 function playColorGenerator() {
-    
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
     const rgbColor = `rgb(${r}, ${g}, ${b})`;
 
-    const toHex = (value) => value.toString(16).padStart(2, "0");
-    const hexColor = `#${toHex(r)}${toHex(g)}${toHex(b)}`;
-
     document.body.style.backgroundColor = rgbColor;
-
-    alert(
-        "Фон страницы изменён на новый случайный цвет!\n\n" +
-        "RGB: " + rgbColor + "\n" +
-        "HEX: " + hexColor
-    );
 }

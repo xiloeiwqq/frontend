@@ -12,7 +12,6 @@ body {
     max-width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    min-width: 100vh;
 }
 
 input,
@@ -24,6 +23,10 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   z-index: 20;
+  position: relative;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .header {
@@ -36,6 +39,7 @@ button {
     align-items: flex-start;
     gap: 48px;
     background: rgba(225, 255, 143, 1);
+    position: relative;
     
     &__star{
         position: absolute;
@@ -68,7 +72,7 @@ button {
 
     &__content {
         padding-top: 196px;
-        width: 1200px;
+        width: 100%;
     }
         
     &__title {
@@ -115,6 +119,43 @@ button {
     }
 }
 
+.games-strip {
+    width: 100%;
+    background: #BCEC30;
+    overflow: hidden;
+
+    &__line {
+        display: inline-flex;
+        align-items: center;
+        gap: 48px;
+        padding: 18px 40px;
+        white-space: nowrap;
+        animation: games-strip-scroll 25s linear infinite;
+    }
+
+    &__item {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: rgba(32, 32, 39, 1);
+        letter-spacing: 0.08em;
+    }
+
+    &__separator {
+        font-size: 20px;
+        color: rgba(32, 32, 39, 1);
+    }
+}
+
+@keyframes games-strip-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .about {
     box-sizing: border-box;
     display: flex;
@@ -122,6 +163,7 @@ button {
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 100px;
+    position: relative;
 
     &__title {
             font-size: 64px;
@@ -203,13 +245,15 @@ button {
             border-radius: 30px;
             padding-bottom: 36px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
             
             &:hover {
                 transform: scale(1.05);
             }
 
             &-image {
-                border-radius: 30px;
+                width: 100%;
+                display: block;
             }
 
             &-content {
